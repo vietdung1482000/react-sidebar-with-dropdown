@@ -1,7 +1,6 @@
 import { Avatar, Drawer, List, Stack, Toolbar } from "@mui/material";
 import assets from "../../assets";
 import colorConfigs from "../../configs/colorConfigs";
-import sizeConfigs from "../../configs/sizeConfigs";
 import appRoutes from "../../routes/appRoutes";
 import SidebarItem from "./SidebarItem";
 import SidebarItemCollapse from "./SidebarItemCollapse";
@@ -11,10 +10,10 @@ const Sidebar = () => {
     <Drawer
       variant="permanent"
       sx={{
-        width: sizeConfigs.sidebar.width,
+        width: "3.5rem",
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          width: sizeConfigs.sidebar.width,
+          width: "75px",
           boxSizing: "border-box",
           borderRight: "0px",
           backgroundColor: colorConfigs.sidebar.bg,
