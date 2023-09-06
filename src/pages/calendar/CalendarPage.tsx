@@ -23,7 +23,7 @@ export const RESOURCES = [
     title: "Phương",
     mobile: "0901234567",
     avatar: "https://i.pinimg.com/564x/cc/06/85/cc0685dd4ca2461e4738f1e16a061467.jpg",
-    color: "#ab2d2d"
+    color: "#5f27cd"
   },
   {
     admin_id: 2,
@@ -77,7 +77,7 @@ const itemData = [
 ];
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -113,7 +113,39 @@ const CalendarPage = (props: Props) => {
               ref={calendarRef}
               events={EVENTS}
               resources={RESOURCES}
-
+              translations={
+                {
+                  navigation: {
+                    month: "Month",
+                    week: "Week",
+                    day: "Day",
+                    today: "Today"
+                  },
+                  form: {
+                    addTitle: "Thông tin dịch vụ",
+                    editTitle: "Chỉnh sửa thông tin dịch vụ",
+                    confirm: "Xác Nhận",
+                    delete: "Hủy",
+                    cancel: "Thoát"
+                  },
+                  event: {
+                    title: "Nội dung dịch vụ",
+                    start: "Bắt đầu",
+                    end: "Kết thúc",
+                    allDay: "All Day"
+                  },
+                  validation: {
+                    required: "Required",
+                    invalidEmail: "Invalid Email",
+                    onlyNumbers: "Only Numbers Allowed",
+                    min: "Minimum {{min}} letters",
+                    max: "Maximum {{max}} letters"
+                  },
+                  moreEvents: "More...",
+                  loading: "Loading..."
+                }
+              }
+              stickyNavitation={true}
               resourceFields={{
                 idField: "admin_id",
                 textField: "title",
@@ -136,6 +168,7 @@ const CalendarPage = (props: Props) => {
                   config: { label: "Assignee", required: true }
                 }
               ]}
+              //show modal
               viewerExtraComponent={(fields, event) => {
                 return (
                   <div>

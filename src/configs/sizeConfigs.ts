@@ -4,4 +4,5 @@ const sizeConfigs = {
   }
 };
 
+
 export default sizeConfigs;

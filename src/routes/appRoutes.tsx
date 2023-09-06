@@ -22,7 +22,7 @@ const appRoutes: RouteType[] = [
     element: <InstallationPage />,
     state: "installation",
     sidebarProps: {
-      displayText: "",
+      displayText: "Installation",
       icon: <FileDownloadOutlinedIcon />
     }
   },
@@ -31,16 +31,16 @@ const appRoutes: RouteType[] = [
     element: <DashboardPageLayout />,
     state: "dashboard",
     sidebarProps: {
-      displayText: "",
+      displayText: "Dashboard",
       icon: <DashboardOutlinedIcon />
     },
   },
   {
     path: "/Home",
-    element: <HomePage />,
-    state: "documentation",
+    element: <CalendarPage />,
+    state: "CalendarPage",
     sidebarProps: {
-      displayText: "",
+      displayText: "Calendar",
       icon: <ArticleOutlinedIcon />
     }
   },
@@ -49,7 +49,7 @@ const appRoutes: RouteType[] = [
     element: <ChangelogPage />,
     state: "changelog",
     sidebarProps: {
-      displayText: "",
+      displayText: "Changelog",
       icon: <FormatListBulletedOutlinedIcon />
     }
   }

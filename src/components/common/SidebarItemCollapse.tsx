@@ -30,14 +30,14 @@ const SidebarItemCollapse = ({ item }: Props) => {
           onClick={() => setOpen(!open)}
           sx={{
             "&: hover": {
-              backgroundColor: colorConfigs.sidebar.hoverBg
+              // backgroundColor: colorConfigs.sidebar.hoverBg
             },
             paddingY: "12px",
             paddingX: "24px"
           }}
         >
           <ListItemIcon sx={{
-            color: colorConfigs.sidebar.color
+            // color: colorConfigs.sidebar.color
           }}>
             {item.sidebarProps.icon && item.sidebarProps.icon}
           </ListItemIcon>
